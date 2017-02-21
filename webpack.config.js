@@ -17,7 +17,7 @@ module.exports = {
     },
     output: {
         path: PATHS.dist,
-        filename: 'static/js/bundle.js',
+        filename: 'static/js/[name].js', // one bundle per `entry` item
         publicPath: PATHS.publicPathProd
     },
 };
