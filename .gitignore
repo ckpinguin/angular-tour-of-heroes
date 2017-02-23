@@ -1,4 +1,7 @@
-node_modules/
+src/app/*.js
+src/app/*.js.map
+
+node_mo dules/
 # Logs
 logs
 *.log
