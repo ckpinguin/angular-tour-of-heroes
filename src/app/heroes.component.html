@@ -1,16 +1,12 @@
 <div>
-    <div>
-        <label>Hero name:</label>
-        <input #heroName placeholder="Enter your hero's name" />
-        <button (click)="add(heroName.value); heroName.value=''">Add</button>
-    </div>
+    <hero-add></hero-add>
     <h2>All Heroes</h2>
     <ul class="heroes">
         <li *ngFor="let hero of heroes"
             [class.selected]="hero === selectedHero"
             (click)="onSelect(hero)">
             <span class="badge">{{hero.id}}</span>
-            {{hero.name}}
+            {{hero === selectedHero ? (hero.name | uppercase) : hero.name}}
             <button class="delete"
                 (click)="delete(hero); $event.stopPropagation()">x</button>
         </li>

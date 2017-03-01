@@ -3,10 +3,12 @@ import { Router } from '@angular/router';
 
 import { Hero } from './hero';
 import { HeroService } from './hero.service';
+// import { HeroAddComponent } from './hero-add.component';
 
 @Component({
     moduleId: module.id, // to have templateUrl, styleUrls relativ to this
     selector: 'my-heroes',
+    // imports: 'HeroAddComponent',
     templateUrl: './heroes.component.html',
     styleUrls: [ './heroes.component.css' ]
 })
@@ -35,16 +37,6 @@ export class HeroesComponent implements OnInit {
 
     gotoDetail(): void {
         this.router.navigate(['/detail', this.selectedHero.id]);
-    }
-
-    add(name: string): void {
-        name = name.trim();
-        if (!name) { return; }
-        this.heroService.create(name)
-            .then(hero => {
-                this.heroes.push(hero);
-                this.selectedHero = null;
-            });
     }
 
     delete(hero: Hero): void {

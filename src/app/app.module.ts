@@ -14,6 +14,7 @@ import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { DashboardComponent } from './dashboard.component';
 import { HeroSearchComponent } from './hero-search.component';
+import { HeroAddComponent } from './hero-add.component';
 
 @NgModule({
     imports: [
@@ -21,12 +22,13 @@ import { HeroSearchComponent } from './hero-search.component';
         FormsModule,
         HttpModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
-        AppRoutingModule ]
+        AppRoutingModule ],
     declarations: [
         AppComponent,
         HeroesComponent,
         HeroDetailComponent,
         HeroSearchComponent,
+        HeroAddComponent,
         DashboardComponent
     ],
     providers: [ HeroService ], // put providers here to have it available everywhere
