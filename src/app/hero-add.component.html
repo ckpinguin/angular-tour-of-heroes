@@ -20,7 +20,7 @@
         <select class="form-control" id="power"
             required
             [(ngModel)]="newHero.power" name="power">
-            <option *ngFor="let power of powers" [value]="pow">{{power}}</option>
+            <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
         </select>
     </div>
     <button (click)="add(newHero)">Add hero</button>

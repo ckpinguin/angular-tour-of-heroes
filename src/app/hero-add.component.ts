@@ -13,31 +13,29 @@ import { HeroService } from './hero.service';
 })
 export class HeroAddComponent implements OnInit {
     newHero: Hero;
-    heroes: Hero[];
     @Input() selectedHero: Hero;
+    powers = ['Really Smart', 'Super Flexible',
+               'Super Hot', 'Weather Changer'];
 
     constructor(
         private heroService: HeroService,
     ) {}
 
     ngOnInit(): void {
-        this.getHeroes();
-        // this.newHero = {};
-    }
-
-    getHeroes(): void {
-        this.heroService
-            .getHeroes()
-            .then(heroes => this.heroes = heroes);
+        this.newHero = {
+            name: null,
+            alterEgo: null,
+            power: null
+        };
     }
 
     add(hero: Hero): void {
-        // if (!hero.name) { return; }
-        // hero.name = hero.name.trim();
+        if (!hero.name) { return; }
+        console.log(JSON.stringify(hero, null, '   '));
+        hero.name = hero.name.trim();
         this.heroService.create(hero)
-            .then(savedHero => {
-                this.newHero = savedHero;
-                this.heroes.push(savedHero);
+            .then(() => {
+                this.newHero = {};
                 this.selectedHero = null;
             });
     }
