@@ -9,7 +9,7 @@ import { HeroService } from './hero.service';
     selector: 'hero-add',
     templateUrl: './hero-add.component.html',
     // directives: [AlertModule]
-    // styleUrls: [ './hero-detail.component.css' ]
+    styleUrls: [ './hero-add.component.css' ]
 })
 export class HeroAddComponent implements OnInit {
     newHero: Hero;
