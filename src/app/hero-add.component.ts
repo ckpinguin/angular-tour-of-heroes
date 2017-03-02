@@ -2,7 +2,6 @@ import { Component, Input, OnInit }        from '@angular/core';
 
 import { Hero } from './hero';
 import { HeroService } from './hero.service';
-// import { AlertModule } from 'ng2-bootstrap';
 
 @Component({
     moduleId: module.id,
