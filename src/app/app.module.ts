@@ -16,7 +16,7 @@ import { DashboardComponent } from './dashboard.component';
 import { HeroSearchComponent } from './hero-search.component';
 import { HeroAddComponent } from './hero-add.component';
 
-// import { AlertModule } from 'ng2-bootstrap';
+import { AlertModule } from 'ng2-bootstrap';
 
 @NgModule({
     imports: [
@@ -25,7 +25,7 @@ import { HeroAddComponent } from './hero-add.component';
         HttpModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
         AppRoutingModule,
-        // AlertModule
+        AlertModule.forRoot()
         ],
     declarations: [
         AppComponent,

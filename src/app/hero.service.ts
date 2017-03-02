@@ -44,7 +44,7 @@ export class HeroService {
 
     create(hero: Hero): Promise<Hero> {
         return this.http
-            .post(this.heroesUrl, hero
+            .post(this.heroesUrl, hero,
                 {headers: this.headers})
             .toPromise()
             .then(res => res.json().data)

@@ -22,7 +22,12 @@ export class HeroAddComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
+        this.createEmptyHero();
+    }
+
+    createEmptyHero(): void {
         this.newHero = {
+            id: null,
             name: null,
             alterEgo: null,
             power: null
@@ -35,7 +40,7 @@ export class HeroAddComponent implements OnInit {
         hero.name = hero.name.trim();
         this.heroService.create(hero)
             .then(() => {
-                this.newHero = {};
+                this.createEmptyHero();
                 this.selectedHero = null;
             });
     }
