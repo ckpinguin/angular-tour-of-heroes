@@ -16,13 +16,17 @@ import { DashboardComponent } from './dashboard.component';
 import { HeroSearchComponent } from './hero-search.component';
 import { HeroAddComponent } from './hero-add.component';
 
+// import { AlertModule } from 'ng2-bootstrap';
+
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
-        AppRoutingModule ],
+        AppRoutingModule,
+        // AlertModule
+        ],
     declarations: [
         AppComponent,
         HeroesComponent,
