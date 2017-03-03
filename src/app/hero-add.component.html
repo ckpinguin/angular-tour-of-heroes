@@ -1,7 +1,4 @@
 <div [hidden]="submitted">
-    <alert type="info">
-        {{diagnostic}}
-    </alert>
     <h2>Add a new hero</h2>
     <!-- Took me a while to find out the right way to do pristine reset forms -->
     <form #heroForm="ngForm" (ngSubmit)="onSubmit(newHero);">
