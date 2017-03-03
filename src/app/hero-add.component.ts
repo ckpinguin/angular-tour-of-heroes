@@ -11,8 +11,11 @@ import { HeroService } from './hero.service';
     styleUrls: [ './hero-add.component.css' ]
 })
 export class HeroAddComponent implements OnInit {
-    newHero: Hero;
     @Input() selectedHero: Hero;
+
+    newHero: Hero;
+    submitted = false;
+
     powers = ['Really Smart', 'Super Flexible',
                'Super Hot', 'Weather Changer'];
 
@@ -33,15 +36,18 @@ export class HeroAddComponent implements OnInit {
         };
     }
 
-    add(hero: Hero): void {
+    // TODO: After submitting, the new hero is not shown in hero list (parent)
+    // Why? The model has changed, so all Views using it (like the hero list)
+    // should be invalidated...
+    onSubmit(hero: Hero): void {
         if (!hero.name) { return; }
         console.log(JSON.stringify(hero, null, '   '));
         hero.name = hero.name.trim();
         this.heroService.create(hero)
             .then(() => {
-                this.createEmptyHero();
                 this.selectedHero = null;
             });
+        this.submitted = true;
     }
 
     // TODO: Remove this when we're done
