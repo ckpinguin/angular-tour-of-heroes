@@ -3,16 +3,14 @@ import { Router } from '@angular/router';
 
 import { Hero } from './hero';
 import { HeroService } from './hero.service';
-// import { HeroAddComponent } from './hero-add.component';
 
 @Component({
     moduleId: module.id, // to have templateUrl, styleUrls relativ to this
     selector: 'my-heroes',
-    // imports: 'HeroAddComponent',
     templateUrl: './heroes.component.html',
     styleUrls: [ './heroes.component.css' ]
 })
-export class HeroesComponent implements OnInit {
+export class HeroListComponent implements OnInit {
     heroes: Hero[];
     selectedHero: Hero;
 

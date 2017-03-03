@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HeroService } from './hero.service';
 import { AppComponent }  from './app.component';
-import { HeroesComponent } from './heroes.component';
+import { HeroListComponent } from './hero-list.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { DashboardComponent } from './dashboard.component';
 import { HeroSearchComponent } from './hero-search.component';
@@ -29,7 +29,7 @@ import { AlertModule } from 'ng2-bootstrap';
         ],
     declarations: [
         AppComponent,
-        HeroesComponent,
+        HeroListComponent,
         HeroDetailComponent,
         HeroSearchComponent,
         HeroAddComponent,
