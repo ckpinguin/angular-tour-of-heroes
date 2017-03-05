@@ -1,8 +1,6 @@
 # Compiled Typescript
-src/app/*.js
-src/app/*.js.map
-src/*.js
-src/*.js.map
+src/app/**.js
+src/app/**.js.map
 
 # AOT compiled stuff
 src/app/*.shim.*

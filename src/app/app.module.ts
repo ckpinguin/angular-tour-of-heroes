@@ -6,21 +6,23 @@ import { HttpModule }    from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
+import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
-
-import { HeroService } from './hero.service';
 import { AppComponent }  from './app.component';
-import { HeroListComponent } from './hero-list.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { DashboardComponent } from './dashboard.component';
-import { HeroSearchComponent } from './hero-search.component';
-import { HeroAddComponent } from './hero-add.component';
+
+import { HeroService } from './heroes/shared/hero.service';
+import { HeroListComponent } from './heroes/hero-list.component/hero-list.component';
+import { HeroDetailComponent } from './heroes/hero-detail.component/hero-detail.component';
+import { DashboardComponent } from './heroes/dashboard.component/dashboard.component';
+import { HeroSearchComponent } from './heroes/hero-search.component/hero-search.component';
+import { HeroAddComponent } from './heroes/hero-add.component/hero-add.component';
 
 import { AlertModule } from 'ng2-bootstrap';
 
 @NgModule({
     imports: [
         BrowserModule,
+        CoreModule,
         FormsModule,
         HttpModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
@@ -35,6 +37,8 @@ import { AlertModule } from 'ng2-bootstrap';
         HeroAddComponent,
         DashboardComponent
     ],
+    exports: [ AppComponent ],
+    entryComponents: [ AppComponent ],
     providers: [ HeroService ], // put providers here to have it available everywhere
     bootstrap: [ AppComponent ]
 })

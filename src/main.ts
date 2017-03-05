@@ -13,4 +13,6 @@ if (!/localhost/.test(document.location.host))  {
 // Launch static AOT with the app module factory.
 // platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);
 // Launch with dynamic JIT
-platformBrowserDynamic().bootstrapModule(AppModule);
+platformBrowserDynamic().bootstrapModule(AppModule)
+    .then(success => console.log(`Bootstrap success`))
+    .catch(err => console.error(err));

@@ -9,7 +9,7 @@
                 required
                 [(ngModel)]="newHero.name" name="name"
                 #name="ngModel"
-            />
+            /><!-- The `#name="ngModel"` is crucial for pristine form when `required` is set -->
             <br>{{name.className}}
         </div>
         <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
