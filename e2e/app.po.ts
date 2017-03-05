@@ -6,6 +6,6 @@ export class TourOfHeroesPage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('toh-heroes-app h1')).getText();
   }
 }
