@@ -1,11 +1,11 @@
 import { Component, Input, OnInit }        from '@angular/core';
 
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { Hero } from '../shared/hero.model';
+import { HeroService } from '../shared/hero.service';
 
 @Component({
     moduleId: module.id,
-    selector: 'hero-add',
+    selector: 'toh-hero-add',
     templateUrl: './hero-add.component.html',
     // directives: [AlertModule]
     styleUrls: [ './hero-add.component.css' ]

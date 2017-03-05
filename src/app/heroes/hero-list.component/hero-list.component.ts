@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { Hero } from '../shared/hero.model';
+import { HeroService } from '../shared/hero.service';
 
 @Component({
     moduleId: module.id, // to have templateUrl, styleUrls relativ to this
-    selector: 'my-heroes',
+    selector: 'toh-heroes',
     templateUrl: './hero-list.component.html',
     styleUrls: [ './hero-list.component.css' ]
 })
