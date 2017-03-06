@@ -7,7 +7,7 @@ import { HeroService } from '../shared/hero.service';
     moduleId: module.id,
     selector: 'toh-dashboard',
     templateUrl: './dashboard.component.html',
-    styleUrls: [ './dashboard.component.css' ]
+    styleUrls: [ './dashboard.component.styl' ]
 })
 export class DashboardComponent implements OnInit {
     heroes: Hero[] = [];

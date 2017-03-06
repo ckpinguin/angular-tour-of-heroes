@@ -8,7 +8,7 @@ import { HeroService } from '../shared/hero.service';
     selector: 'toh-hero-add',
     templateUrl: './hero-add.component.html',
     // directives: [AlertModule]
-    styleUrls: [ './hero-add.component.css' ]
+    styleUrls: [ './hero-add.component.styl' ]
 })
 export class HeroAddComponent implements OnInit {
     @Input() selectedHero: Hero;

@@ -8,7 +8,7 @@ import { HeroService } from '../shared/hero.service';
     moduleId: module.id, // to have templateUrl, styleUrls relativ to this
     selector: 'toh-heroes',
     templateUrl: './hero-list.component.html',
-    styleUrls: [ './hero-list.component.css' ]
+    styleUrls: [ './hero-list.component.styl' ]
 })
 export class HeroListComponent implements OnInit {
     heroes: Hero[];
