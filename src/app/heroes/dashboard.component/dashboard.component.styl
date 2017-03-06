@@ -43,20 +43,18 @@ h4 {
     min-width: 120px;
     background-color: #607D8B;
     border-radius: 2px;
-}
-
-.module:hover {
-    background-color: #EEE;
-    cursor: pointer;
-    color: #607d8b;
+    &:hover {
+        background-color: #EEE;
+        cursor: pointer;
+        color: #607d8b;
+    }
 }
 
 .grid-pad {
     padding: 10px 0;
-}
-
-.grid-pad>[class*='col-']:last-of-type {
-    padding-right: 20px;
+    & > [class*='col-']:last-of-type {
+        padding-right; 20px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -74,10 +72,3 @@ h4 {
         min-width: 60px;
     }
 }
-
-
-/*
-Copyright 2017 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

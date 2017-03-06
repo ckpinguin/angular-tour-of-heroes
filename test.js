@@ -99,13 +99,6 @@ test('Assertions with tape.', (assert) => {
     assert.end();
 });
 
-after('after', (assert) => {
-
-  assert.pass('Do something after tests here.');
-
-  assert.end();
-});
-
 test('Greet World', (assert) => new Promise((resolve) => {
   assert.equal(console.log('World'), 'Hello, World!');
 
@@ -114,3 +107,10 @@ test('Greet World', (assert) => new Promise((resolve) => {
     resolve();
   }, 10);
 }));
+
+after('after', (assert) => {
+
+  assert.pass('Do something after tests here.');
+
+  assert.end();
+});

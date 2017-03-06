@@ -11,7 +11,7 @@ import { HeroService } from '../shared/hero.service';
     moduleId: module.id,
     selector: 'toh-hero-detail',
     templateUrl: './hero-detail.component.html',
-    styleUrls: [ './hero-detail.component.css' ]
+    styleUrls: [ './hero-detail.component.styl' ]
 })
 export class HeroDetailComponent implements OnInit {
     hero: Hero;
