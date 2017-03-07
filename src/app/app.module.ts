@@ -11,11 +11,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HeroService } from './heroes/shared/hero.service';
-import { HeroListComponent } from './heroes/hero-list.component/hero-list.component';
-import { HeroDetailComponent } from './heroes/hero-detail.component/hero-detail.component';
-import { DashboardComponent } from './heroes/dashboard.component/dashboard.component';
-import { HeroSearchComponent } from './heroes/hero-search.component/hero-search.component';
-import { HeroAddComponent } from './heroes/hero-add.component/hero-add.component';
+import { HeroListComponent } from './heroes/hero-list/hero-list.component';
+import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component';
+import { DashboardComponent } from './heroes/dashboard/dashboard.component';
+import { HeroSearchComponent } from './heroes/hero-search/hero-search.component';
+import { HeroAddComponent } from './heroes/hero-add/hero-add.component';
 
 import { AlertModule } from 'ng2-bootstrap';
 
