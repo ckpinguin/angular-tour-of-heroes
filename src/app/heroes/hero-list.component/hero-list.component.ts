@@ -26,7 +26,7 @@ export class HeroListComponent implements OnInit {
     getHeroes(): void {
         this.heroService
             .getHeroes()
-            .then(heroes => this.heroes = heroes);
+            .then((heroes: Hero[]) => this.heroes = heroes);
     }
 
     onSelect(hero: Hero): void {
