@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { Headers, Http, Response } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -15,7 +15,7 @@ export class HeroService {
     getHeroes(): Promise<Hero[]> {
         return this.http.get(this.heroesUrl)
             .toPromise()
-            .then(response => response.json().data as Hero[])
+            .then((res: Response) => res.json().data as Hero[])
             .catch(this.handleError);
     }
 
@@ -29,7 +29,7 @@ export class HeroService {
         const url = `${this.heroesUrl}/${id}`;
         return this.http.get(url)
             .toPromise()
-            .then(response => response.json().data as Hero)
+            .then((res: Response) => res.json().data as Hero)
             .catch(this.handleError);
     }
 
@@ -47,7 +47,7 @@ export class HeroService {
             .post(this.heroesUrl, hero,
                 {headers: this.headers})
             .toPromise()
-            .then(res => res.json().data)
+            .then((res: Response) => res.json().data)
             .catch(this.handleError);
     }
 
