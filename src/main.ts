@@ -7,8 +7,7 @@ import { AppModule } from './app/app.module';
 if (environment.production) {
   enableProdMode();
 }
-// Launch static AOT with the app module factory.
-// Launch with dynamic JIT
+
 platformBrowserDynamic().bootstrapModule(AppModule)
     .then(success => console.log(`Bootstrap success`))
     .catch(err => console.error(err));
