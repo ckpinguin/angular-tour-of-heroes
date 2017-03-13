@@ -35,8 +35,13 @@
     "@angular/router": "^3.4.0",
     "angular-in-memory-web-api": "^0.3.0",
     "bootstrap": "^3.3.7",
+    "complexity-report": "^2.0.0-alpha",
     "core-js": "^2.4.1",
+    "escomplex": "^2.0.0-alpha",
+    "metrics-graphics": "^2.11.0",
+    "plato-esnext": "^1.4.5",
     "rxjs": "^5.1.0",
+    "sloc": "^0.2.0",
     "zone.js": "^0.7.6"
   },
   "devDependencies": {
